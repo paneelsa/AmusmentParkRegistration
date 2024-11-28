@@ -1,0 +1,57 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title size="large" style="text-align: center;">Amusement Park Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  
+    <ion-item>
+      <ion-label position="floating"> First Name</ion-label>
+      <ion-input formControlName="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Last Name</ion-label>
+      <ion-input formControlName="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Age</ion-label>
+      <ion-input formControlName="age"></ion-input>
+    </ion-item>
+    
+      <ion-list>
+        <ion-item>
+          <ion-select placeholder="Select Gender" formControlName="gender">
+            <div slot="label">
+              Gender 
+            </div>
+            <ion-select-option value="male">Male</ion-select-option>
+            <ion-select-option value="female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+   
+    
+    <ion-item>
+      <ion-label position="floating"> Height in cm</ion-label>
+      <ion-input formControlName="height"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Weight in kg</ion-label>
+      <ion-input formControlName="weight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Medical History</ion-label>
+      <ion-input formControlName="medicalHistory"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="!registrationForm.valid">Register</ion-button>
+  </form>
+  
+</ion-content>

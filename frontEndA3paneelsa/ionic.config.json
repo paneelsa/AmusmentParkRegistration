@@ -1,0 +1,7 @@
+{
+  "name": "frontEndA3paneelsa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
